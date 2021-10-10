@@ -28,7 +28,7 @@ body{
 
 p{
     font-family: 'Raleway', sans-serif;
-    margin: 0;
+    margin: 6px 0;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -73,8 +73,10 @@ a:hover{
     height: 100vh;
     padding: 2rem;
     display: grid;
-    grid-template-columns: min-max(100px, auto);
+    grid-template-columns: auto;
+    overflow: hidden;
 }
+
 header{
     display: flex;
     justify-content: space-between;
@@ -95,17 +97,7 @@ header{
     letter-spacing: 0em;
 }
 
-.logo__one img{
-    width: 100px;
-    height: 30px;
-}
-
-.logo__two img{
-    width: 100px;
-    height: 30px;
-}
-
-.logo__three img{
+.logo__one img, .logo__two img, .logo__three img{
     width: 100px;
     height: 30px;
 }
@@ -115,6 +107,7 @@ header{
 .first__layer{
     margin: 3rem 0 ;
 }
+
 .first__layer h3{
     font-size: 36px;
     font-weight: 400;
@@ -138,6 +131,10 @@ header{
 
 
 /* SECOND LAYER */
+.second__layer{
+    margin-bottom: 1rem ;
+}
+
 .second__layer img{
     width: 140px;
 }
@@ -151,4 +148,101 @@ header{
     font-size: 22px;
     font-weight: 400;
     letter-spacing: 0em;
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    body{
+        border-left: 20px #00AEFF solid;
+    }
+
+    .main__body{
+        height: auto;
+        overflow: hidden;
+    }
+
+    header{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+
+    .header__logos{
+        width: 250px;
+    }
+     
+    .logo__one img, .logo__two img, .logo__three img{
+        width: 60px;
+        height: 30px;
+    }
+
+    .header__link a p{
+        font-size: 16px;
+        line-height: 24px;
+        width: auto;
+    }
+
+    /* FIRST LAYER */
+    .first__layer{
+        margin: 1.37rem 0;
+    }
+
+    .first__layer h3{
+        font-size: 24px;
+    }
+
+    .first__layer h1{
+        font-size: 60px;
+        margin-top: 0;
+    }
+
+    .first__layer p{
+        width: auto;
+        font-size: 16px;
+    }
+
+    /* SECOND LAYER */
+    .second__layer img{
+        width: 100px;
+    }
+    .second__layer h5{
+        font-size: 24px;
+    }
+
+    .second__layer h6{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:900px) {
+    
+    .main__body{
+        height: auto;
+        overflow: hidden;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .header__logos{
+        width: 260px;
+    }
+     
+    .logo__one img, .logo__two img, .logo__three img{
+        width: 80px;
+        height: 30px;
+    }
+
+    .header__link a p{
+        width: 600px;
+        font-size: 18px;
+    }
+
+    .first__layer p {
+        width: 650px;
+    }
 }
