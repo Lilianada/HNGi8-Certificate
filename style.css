@@ -6,6 +6,8 @@
 ::before,
 ::after{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -15,14 +17,12 @@
 
 body{
     max-width: 100vw;
-    height: auto;
-    margin: 0 auto;
-    border-left: 40px #00AEFF solid;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #fffe;
     font-style: normal;
-    background: url(assets/background.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     color: rgba(0, 0, 0, 0.993);
 }
 
@@ -50,9 +50,9 @@ img {
 span{
     color: #00AEFF;
     font-family: 'Work Sans', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 32px;
+    line-height: 30px;
     letter-spacing: 0em;
 }
 
@@ -70,10 +70,21 @@ a:hover{
 /*========================================*/
 
 .main__body{
-    height: 100vh;
-    padding: 2rem;
+    height: 90vh;
+    width: 90vw;
+    
     display: grid;
     grid-template-columns: auto;
+    align-items: center;
+    padding: 2rem;
+
+    background: url(assets/background.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-left: 40px #00AEFF solid;
+    
+    
     overflow: hidden;
 }
 
@@ -93,32 +104,32 @@ header{
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    /* line-height: 32px; */
+    line-height: 32px;
     letter-spacing: 0em;
 }
 
 .logo__one img, .logo__two img, .logo__three img{
-    width: 100px;
+    width: 90px;
     height: 30px;
 }
 
 /* First Layer */
 
 .first__layer{
-    margin: 3rem 0 ;
+    margin: 2rem 0 ;
 }
 
 .first__layer h3{
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
-    /* line-height: 30px; */
+    line-height: 30px;
     letter-spacing: 0em;
 }
 
 .first__layer h1{
-    font-size: 72px;
+    font-size: 62px;
     font-weight: 500;
-    line-height: 100px;
+    line-height: 80px;
     letter-spacing: 0em;
     margin-top: 2rem;
 }
@@ -136,28 +147,27 @@ header{
 }
 
 .second__layer img{
-    width: 140px;
+    width: 130px;
 }
+
 .second__layer h5{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
+    line-height: 30px;
     letter-spacing: 0em;
 }
 
 .second__layer h6{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
+    line-height: 30px;
     letter-spacing: 0em;
 }
 
 @media only screen and (min-width:320px) and (max-width:767px) {
-    body{
-        border-left: 20px #00AEFF solid;
-    }
-
     .main__body{
-        height: auto;
-        overflow: hidden;
+        padding: 1rem;
+        border-left: 20px #00AEFF solid;
     }
 
     header{
@@ -166,26 +176,24 @@ header{
         align-items: flex-start;
     }
 
-
-
     .header__logos{
         width: 250px;
     }
      
     .logo__one img, .logo__two img, .logo__three img{
         width: 60px;
-        height: 30px;
+        height: 20px;
     }
 
     .header__link a p{
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 18px;
         width: auto;
     }
 
     /* FIRST LAYER */
     .first__layer{
-        margin: 1.37rem 0;
+        margin: 1.5rem 0;
     }
 
     .first__layer h3{
@@ -193,7 +201,7 @@ header{
     }
 
     .first__layer h1{
-        font-size: 60px;
+        font-size: 48px;
         margin-top: 0;
     }
 
@@ -215,11 +223,10 @@ header{
     }
 }
 
-@media only screen and (min-width:768px) and (max-width:900px) {
-    
+@media only screen and (min-width:768px) and (max-width:1020px) {
     .main__body{
-        height: auto;
-        overflow: hidden;
+        padding: 2rem;
+        border-left: 30px #00AEFF solid;
     }
 
     header{
@@ -229,20 +236,48 @@ header{
     }
 
     .header__logos{
-        width: 260px;
+        width: 300px;
     }
      
     .logo__one img, .logo__two img, .logo__three img{
         width: 80px;
-        height: 30px;
+        height: 20px;
     }
 
     .header__link a p{
-        width: 600px;
+        width: auto;
+        font-size: 16px;
+    }
+
+    /* FIRST LAYER */
+    .first__layer{
+        margin: 1.5rem 0;
+    }
+
+    .first__layer h3{
+        font-size: 28px;
+    }
+
+    .first__layer h1{
+        font-size: 48px;
+        margin-top: 0;
+    }
+
+    .first__layer p{
+        width: auto;
         font-size: 18px;
     }
 
-    .first__layer p {
-        width: 650px;
+    /* SECOND LAYER */
+    .second__layer img{
+        width: 100px;
+    }
+
+    .second__layer h5{
+        font-size: 26px;
+    }
+
+    .second__layer h6{
+        font-size: 18px;
     }
 }
