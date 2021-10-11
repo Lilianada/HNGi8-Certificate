@@ -129,8 +129,9 @@ header{
 .first__layer h1{
     font-size: 56px;
     font-weight: 500;
-    line-height: 100px;
+    line-height: 70px;
     letter-spacing: 0em;
+    margin-top: 2rem;
 }
 
 .first__layer p{
